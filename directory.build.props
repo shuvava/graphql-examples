@@ -25,7 +25,7 @@
         <MsConfiguration>2.2.0</MsConfiguration>
         <MsConfigurationOptions>2.2.0</MsConfigurationOptions>
         <MsExtensionsCaching>2.2.0</MsExtensionsCaching>
-        <GraphQL>2.0.0</GraphQL>
+        <GraphQL>2.4.0</GraphQL>
         <AspNetCore>2.2.0</AspNetCore>
     </PropertyGroup>
     
