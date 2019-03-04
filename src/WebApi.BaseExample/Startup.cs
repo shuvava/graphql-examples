@@ -1,10 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 using GraphQL;
 using GraphQL.Http;
+using GraphQL.Server;
+using GraphQL.Server.Ui.Playground;
 using GraphQL.Types;
 
 using Microsoft.AspNetCore.Builder;
@@ -45,9 +42,9 @@ namespace WebApi.BaseExample
                 {
                     _.EnableMetrics = true;
                     _.ExposeExceptions = true;
-                })
-                .AddUserContextBuilder(httpContext => new GraphQLUserContext { User = httpContext.User });
+                });
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -56,11 +53,15 @@ namespace WebApi.BaseExample
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.Run(async (context) =>
+            // use HTTP middleware for ChatSchema at path /graphql
+            app.UseGraphQL<ISchema>("/graphql");
+            // use graphql-playground at default url /ui/playground
+            app.UseGraphQLPlayground(new GraphQLPlaygroundOptions
             {
-                await context.Response.WriteAsync("Hello World!");
+                Path = "/ui/playground"
             });
+
+            app.Run(async context => { await context.Response.WriteAsync("Hello World!"); });
         }
     }
 }

@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="3.4.0" />
     <PackageReference Include="Microsoft.AspNetCore" Version="$(AspNetCore)" />
     <PackageReference Include="Microsoft.AspNetCore.AzureAppServices.HostingStartup" Version="$(AspNetCore)" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="$(AspNetCore)" />
@@ -20,7 +21,6 @@
     <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="$(MsLogging)" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="$(MsLogging)" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="$(MsLogging)" />
-    <PackageReference Include="GraphQL" Version="$(GraphQL)" />
     <PackageReference Include="GraphQL.Server.Ui.GraphiQL" Version="3.4.0" />
     <PackageReference Include="GraphQL.Authorization" Version="2.1.29" />
     <PackageReference Include="GraphQL.Server.Ui.Playground" Version="3.4.0" />
