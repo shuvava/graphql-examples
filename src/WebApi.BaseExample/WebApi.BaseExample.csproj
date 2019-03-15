@@ -15,6 +15,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="$(AspNetCore)" />
     <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="$(AspNetCore)" />
     <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration" Version="2.2.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.3" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="$(MsConfiguration)" />
     <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="$(MsConfiguration)" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="$(MsConfiguration)" />
@@ -31,6 +32,7 @@
   <ItemGroup>
     <ProjectReference Include="..\StarWars.Implementation\StarWars.Implementation.csproj" />
     <ProjectReference Include="..\StarWars.Models\StarWars.Models.csproj" />
+    <ProjectReference Include="..\StarWars.Repository.EF6\StarWars.Repository.EF6.csproj" />
     <ProjectReference Include="..\StarWars.Repository.Mock\StarWars.Repository.Mock.csproj" />
   </ItemGroup>
 

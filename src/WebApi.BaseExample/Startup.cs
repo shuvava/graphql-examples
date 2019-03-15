@@ -7,11 +7,14 @@ using GraphQL.Types;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 using StarWars.Implementation;
 using StarWars.Implementation.Types;
 using StarWars.Models;
+using StarWars.Repository.EF6;
 using StarWars.Repository.Mock;
 using StarWars.Types;
 
@@ -20,6 +23,12 @@ namespace WebApi.BaseExample
 {
     public class Startup
     {
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+        public IConfiguration Configuration { get; }
+
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
@@ -29,7 +38,11 @@ namespace WebApi.BaseExample
             services.AddSingleton<IDocumentExecuter, DocumentExecuter>();
             services.AddSingleton<IDocumentWriter, DocumentWriter>();
 
+            // repositories
             services.AddSingleton<IStarWarsRepository, StarWarsData>();
+            services.AddDbContext<StarWarsContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("StarWarsDatabase")));
+
             services.AddSingleton<StarWarsQuery>();
             services.AddSingleton<StarWarsMutation>();
             services.AddSingleton<HumanType>();

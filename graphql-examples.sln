@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars.Implementation", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.BaseExample", "src\WebApi.BaseExample\WebApi.BaseExample.csproj", "{AA8D1634-BA23-4597-B708-0AE8DF8E2C1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.Models", "src\StarWars.Models\StarWars.Models.csproj", "{6AAE324E-9E63-45DD-BA1B-10B71644F066}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars.Models", "src\StarWars.Models\StarWars.Models.csproj", "{6AAE324E-9E63-45DD-BA1B-10B71644F066}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.Repository.Mock", "src\StarWars.Repository.Mock\StarWars.Repository.Mock.csproj", "{208951F7-B75B-4177-96F7-FC30E112B811}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars.Repository.Mock", "src\StarWars.Repository.Mock\StarWars.Repository.Mock.csproj", "{208951F7-B75B-4177-96F7-FC30E112B811}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.Repository.EF6", "src\StarWars.Repository.EF6\StarWars.Repository.EF6.csproj", "{D392DE19-D6CC-41F1-80C5-29A2AF46919E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{208951F7-B75B-4177-96F7-FC30E112B811}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{208951F7-B75B-4177-96F7-FC30E112B811}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{208951F7-B75B-4177-96F7-FC30E112B811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D392DE19-D6CC-41F1-80C5-29A2AF46919E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D392DE19-D6CC-41F1-80C5-29A2AF46919E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D392DE19-D6CC-41F1-80C5-29A2AF46919E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D392DE19-D6CC-41F1-80C5-29A2AF46919E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
