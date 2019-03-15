@@ -1,11 +1,14 @@
 using GraphQL.Types;
 
+using StarWars.Models;
+using StarWars.Types;
 
-namespace StarWars.Types
+
+namespace StarWars.Implementation.Types
 {
     public class DroidType : ObjectGraphType<Droid>
     {
-        public DroidType(StarWarsData data)
+        public DroidType(IStarWarsRepository data)
         {
             Name = "Droid";
             Description = "A mechanical creature in the Star Wars universe.";

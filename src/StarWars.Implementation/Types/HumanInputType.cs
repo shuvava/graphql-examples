@@ -1,7 +1,9 @@
 using GraphQL.Types;
 
+using StarWars.Models;
 
-namespace StarWars.Types
+
+namespace StarWars.Implementation.Types
 {
     public class HumanInputType : InputObjectGraphType<Human>
     {

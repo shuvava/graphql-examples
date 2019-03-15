@@ -9,7 +9,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-using StarWars;
+using StarWars.Implementation;
+using StarWars.Implementation.Types;
+using StarWars.Models;
+using StarWars.Repository.Mock;
 using StarWars.Types;
 
 
@@ -26,7 +29,7 @@ namespace WebApi.BaseExample
             services.AddSingleton<IDocumentExecuter, DocumentExecuter>();
             services.AddSingleton<IDocumentWriter, DocumentWriter>();
 
-            services.AddSingleton<StarWarsData>();
+            services.AddSingleton<IStarWarsRepository, StarWarsData>();
             services.AddSingleton<StarWarsQuery>();
             services.AddSingleton<StarWarsMutation>();
             services.AddSingleton<HumanType>();

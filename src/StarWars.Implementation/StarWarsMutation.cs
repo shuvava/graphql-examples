@@ -1,9 +1,10 @@
 using GraphQL.Types;
 
-using StarWars.Types;
+using StarWars.Implementation.Types;
+using StarWars.Models;
 
 
-namespace StarWars
+namespace StarWars.Implementation
 {
     /// <example>
     /// This is an example JSON request for a mutation
@@ -18,7 +19,7 @@ namespace StarWars
     /// </example>
     public class StarWarsMutation : ObjectGraphType
     {
-        public StarWarsMutation(StarWarsData data)
+        public StarWarsMutation(IStarWarsRepository data)
         {
             Name = "Mutation";
 

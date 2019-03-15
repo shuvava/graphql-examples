@@ -1,7 +1,7 @@
 using GraphQL.Validation;
 
 
-namespace StarWars
+namespace StarWars.Implementation
 {
     public class InputValidationRule : IValidationRule
     {

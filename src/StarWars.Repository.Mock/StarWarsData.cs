@@ -5,12 +5,12 @@ using System.Threading.Tasks;
 
 using GraphQL;
 
-using StarWars.Types;
+using StarWars.Models;
 
 
-namespace StarWars
+namespace StarWars.Repository.Mock
 {
-    public class StarWarsData
+    public class StarWarsData: IStarWarsRepository
     {
         private readonly List<Human> _humans = new List<Human>();
         private readonly List<Droid> _droids = new List<Droid>();

@@ -2,14 +2,15 @@ using System;
 
 using GraphQL.Types;
 
-using StarWars.Types;
+using StarWars.Implementation.Types;
+using StarWars.Models;
 
 
-namespace StarWars
+namespace StarWars.Implementation
 {
     public class StarWarsQuery : ObjectGraphType<object>
     {
-        public StarWarsQuery(StarWarsData data)
+        public StarWarsQuery(IStarWarsRepository data)
         {
             Name = "Query";
 

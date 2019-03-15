@@ -1,7 +1,10 @@
 using GraphQL.Types;
 
+using StarWars.Models;
+using StarWars.Types;
 
-namespace StarWars.Types
+
+namespace StarWars.Implementation.Types
 {
     public class CharacterInterface : InterfaceGraphType<StarWarsCharacter>
     {
