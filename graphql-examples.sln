@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars.Repository.Mock", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars.Repository.EF6", "src\StarWars.Repository.EF6\StarWars.Repository.EF6.csproj", "{D392DE19-D6CC-41F1-80C5-29A2AF46919E}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{DE897764-FC36-41DB-A078-ABF3672B5C8E}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

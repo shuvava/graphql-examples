@@ -288,5 +288,7 @@ __pycache__/
 *.odx.cs
 *.xsd.cs
 
-#build folder 
+#build folder
 build/**
+**/docker files
+database/image-data/

@@ -8,11 +8,15 @@ services:
       - 1433:1433
     volumes:
       - ./database/image-data:/var/opt/mssql
-      - ./database/scripts:/usr/src/app
+      - ./database/scripts:/usr/src/app/bin
+      - ./database/src:/usr/src/app/sql
     # bash will be executed from that path, our scripts folder
     working_dir: /usr/src/app
     # run the entrypoint.sh that will import the data AND sqlserver
-    command: sh -c ' chmod +x ./start.sh; ./start.sh & /opt/mssql/bin/sqlservr;'
+    command: sh -c ' chmod +x ./bin/start.sh; ./bin/start.sh'
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=P@ssw0rd
   webapi.baseexample:
     image: ${DOCKER_REGISTRY-}webapibaseexample
     build:
