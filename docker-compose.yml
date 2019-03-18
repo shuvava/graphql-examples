@@ -1,0 +1,20 @@
+version: '3.4'
+
+services:
+  mssql:
+    image: microsoft/mssql-server-linux:latest
+    container_name: db
+    ports:
+      - 1433:1433
+    volumes:
+      - ./database/image-data:/var/opt/mssql
+      - ./database/scripts:/usr/src/app
+    # bash will be executed from that path, our scripts folder
+    working_dir: /usr/src/app
+    # run the entrypoint.sh that will import the data AND sqlserver
+    command: sh -c ' chmod +x ./start.sh; ./start.sh & /opt/mssql/bin/sqlservr;'
+  webapi.baseexample:
+    image: ${DOCKER_REGISTRY-}webapibaseexample
+    build:
+      context: .
+      dockerfile: src/WebApi.BaseExample/Dockerfile
