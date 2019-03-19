@@ -40,8 +40,17 @@ namespace WebApi.BaseExample
 
             // repositories
             services.AddSingleton<IStarWarsRepository, StarWarsData>();
-            services.AddDbContext<StarWarsContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("StarWarsDatabase")));
+            //services.AddSingleton<IStarWarsRepository, StarWarsRepositoryEF6>(ctx =>
+            //    new StarWarsRepositoryEF6(
+            //        new StarWarsContext(
+            //            new DbContextOptionsBuilder<StarWarsContext>()
+            //                .UseSqlServer(
+            //                    Configuration.GetConnectionString("StarWarsDatabase")
+            //                    )
+            //                .Options)
+            //        )
+            //);
+
 
             services.AddSingleton<StarWarsQuery>();
             services.AddSingleton<StarWarsMutation>();

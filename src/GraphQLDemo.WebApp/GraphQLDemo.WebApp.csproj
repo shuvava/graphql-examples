@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <UserSecretsId>6069daf5-fe6b-43a7-b5fa-1a6d1543abfa</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore" Version="$(AspNetCore)" />
+    <PackageReference Include="Microsoft.AspNetCore.AzureAppServices.HostingStartup" Version="$(AspNetCore)" />
+    <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="$(AspNetCore)" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="$(AspNetCore)" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="$(AspNetCore)" />
+    <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration" Version="2.2.1" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="$(MsConfigurationOptions)" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="$(MsConfiguration)" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="$(MsConfiguration)" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="$(MsConfiguration)" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="$(MsLogging)" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="$(MsLogging)" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="$(MsLogging)" />
+
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.3" />
+
+     <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="3.4.0" />
+     <PackageReference Include="GraphQL.Server.Ui.GraphiQL" Version="3.4.0" />
+     <PackageReference Include="GraphQL.Authorization" Version="2.1.29" />
+     <PackageReference Include="GraphQL.Server.Ui.Playground" Version="3.4.0" />
+      
+      <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.4.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GraphQLDemo.Implementation\GraphQLDemo.Implementation.csproj" />
+    <ProjectReference Include="..\GraphQLDemo.Models\GraphQLDemo.Models.csproj" />
+    <ProjectReference Include="..\GraphQLDemo.Repository.EF7\GraphQLDemo.Repository.EF7.csproj" />
+  </ItemGroup>
+
+</Project>

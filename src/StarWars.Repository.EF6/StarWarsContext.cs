@@ -17,6 +17,15 @@ namespace StarWars.Repository.EF6
         }
 
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            //modelBuilder.Entity<Human>()
+            //    .HasMany(c =>c.Friends)
+            //    .
+
+        }
+
+
         public virtual DbSet<Human> Humans { get; set; }
         public virtual DbSet<Droid> Droids { get; set; }
     }

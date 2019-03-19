@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.489
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28711.60
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars.Implementation", "src\StarWars.Implementation\StarWars.Implementation.csproj", "{0BA84536-E46A-45E1-93F1-91F12173D3CA}"
 EndProject
@@ -12,6 +12,14 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars.Repository.Mock", "src\StarWars.Repository.Mock\StarWars.Repository.Mock.csproj", "{208951F7-B75B-4177-96F7-FC30E112B811}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars.Repository.EF6", "src\StarWars.Repository.EF6\StarWars.Repository.EF6.csproj", "{D392DE19-D6CC-41F1-80C5-29A2AF46919E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQLDemo.Models", "src\GraphQLDemo.Models\GraphQLDemo.Models.csproj", "{F1E50293-9C36-4BAF-BBE6-ABE04F86EA73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQLDemo.Repository.EF7", "src\GraphQLDemo.Repository.EF7\GraphQLDemo.Repository.EF7.csproj", "{48F07BF6-92B0-4269-A515-DC8F84353A2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQLDemo.WebApp", "src\GraphQLDemo.WebApp\GraphQLDemo.WebApp.csproj", "{A26182AC-8D2D-474C-A6D0-381AB5554802}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphQLDemo.Implementation", "src\GraphQLDemo.Implementation\GraphQLDemo.Implementation.csproj", "{47DF9D31-8323-4DA4-959C-94C0434C985F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +47,22 @@ Global
 		{D392DE19-D6CC-41F1-80C5-29A2AF46919E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D392DE19-D6CC-41F1-80C5-29A2AF46919E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D392DE19-D6CC-41F1-80C5-29A2AF46919E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DE897764-FC36-41DB-A078-ABF3672B5C8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DE897764-FC36-41DB-A078-ABF3672B5C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE897764-FC36-41DB-A078-ABF3672B5C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DE897764-FC36-41DB-A078-ABF3672B5C8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1E50293-9C36-4BAF-BBE6-ABE04F86EA73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1E50293-9C36-4BAF-BBE6-ABE04F86EA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1E50293-9C36-4BAF-BBE6-ABE04F86EA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1E50293-9C36-4BAF-BBE6-ABE04F86EA73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48F07BF6-92B0-4269-A515-DC8F84353A2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48F07BF6-92B0-4269-A515-DC8F84353A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48F07BF6-92B0-4269-A515-DC8F84353A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48F07BF6-92B0-4269-A515-DC8F84353A2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A26182AC-8D2D-474C-A6D0-381AB5554802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A26182AC-8D2D-474C-A6D0-381AB5554802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A26182AC-8D2D-474C-A6D0-381AB5554802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A26182AC-8D2D-474C-A6D0-381AB5554802}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47DF9D31-8323-4DA4-959C-94C0434C985F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47DF9D31-8323-4DA4-959C-94C0434C985F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47DF9D31-8323-4DA4-959C-94C0434C985F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47DF9D31-8323-4DA4-959C-94C0434C985F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
