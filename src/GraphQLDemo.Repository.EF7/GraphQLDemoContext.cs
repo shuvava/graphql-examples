@@ -9,11 +9,9 @@ namespace GraphQLDemo.Repository.EF7
     {
         public GraphQLDemoContext()
         {
-            
         }
-        public GraphQLDemoContext(DbContextOptions<GraphQLDemoContext> options)
+        public GraphQLDemoContext(DbContextOptions<GraphQLDemoContext> options): base(options)
         {
-            
         }
         public virtual DbSet<Employee> Employee { get; set; } 
     }
