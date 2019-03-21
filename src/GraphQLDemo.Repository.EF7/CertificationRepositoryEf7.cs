@@ -19,5 +19,12 @@ namespace GraphQLDemo.Repository.EF7
         {
             return _context.Certification.Where(a => a.Id == employeeId).ToListAsync();
         }
+
+
+        public async Task<ILookup<long, Certification>> GetCertificationByEmployeeAsync(IEnumerable<long> employeeIds)
+        {
+            var reviews = await _context.Certification.Where(a => employeeIds.Contains(a.EmployeeId)).ToListAsync();  
+            return reviews.ToLookup(r => r.EmployeeId);
+        }
     }
 }

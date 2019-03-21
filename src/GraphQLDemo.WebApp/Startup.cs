@@ -61,10 +61,11 @@ namespace GraphQLDemo.WebApp
             //services.AddScoped<IDocumentExecuter, DocumentExecuter>();
             //services.AddScoped<IDocumentWriter, DocumentWriter>();
             services.AddGraphQL(_ =>
-            {
-                _.EnableMetrics = true;
-                _.ExposeExceptions = true;
-            });
+                {
+                    _.EnableMetrics = true;
+                    _.ExposeExceptions = true;
+                })
+                .AddDataLoader();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
