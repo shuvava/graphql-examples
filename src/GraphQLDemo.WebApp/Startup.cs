@@ -21,6 +21,9 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
+using Newtonsoft.Json;
+
+
 namespace GraphQLDemo.WebApp
 {
     public class Startup
@@ -43,6 +46,14 @@ namespace GraphQLDemo.WebApp
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
+            services
+                .AddMvcCore()
+                .AddJsonFormatters(options =>
+                {
+                    options.NullValueHandling = NullValueHandling.Ignore;
+                    options.MissingMemberHandling = MissingMemberHandling.Ignore;
+                    //options.Converters.Add(new StringEnumConverter {CamelCaseText = true});
+                });
             //GraphQL deps
             services.AddScoped<IDependencyResolver>(s => new FuncDependencyResolver(s.GetRequiredService));
             //services.AddScoped<IDocumentExecuter, DocumentExecuter>();
@@ -68,6 +79,9 @@ namespace GraphQLDemo.WebApp
             {
                 Path = "/ui/playground"
             });
+
+            app.UseMvc();
+
             app.Run(async (context) =>
             {
                 await context.Response.WriteAsync("Hello World!");

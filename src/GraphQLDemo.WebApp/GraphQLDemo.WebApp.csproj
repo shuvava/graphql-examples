@@ -8,10 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="GraphQL.Client" Version="1.0.3" />
     <PackageReference Include="Microsoft.AspNetCore" Version="$(AspNetCore)" />
     <PackageReference Include="Microsoft.AspNetCore.AzureAppServices.HostingStartup" Version="$(AspNetCore)" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="$(AspNetCore)" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="$(AspNetCore)" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Json" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="$(AspNetCore)" />
     <PackageReference Include="Microsoft.AspNetCore.Server.IISIntegration" Version="2.2.1" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="$(MsConfigurationOptions)" />

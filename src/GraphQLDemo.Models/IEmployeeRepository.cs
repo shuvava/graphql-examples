@@ -7,5 +7,6 @@ namespace GraphQLDemo.Models
     public interface IEmployeeRepository
     {
         Task<List<Employee>> GetEmployeesAsync();
+        Task<Employee> GetEmployeeByIdAsync(long id); 
     }
 }

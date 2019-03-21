@@ -17,6 +17,12 @@ namespace GraphQLDemo.Repository.EF7
         {
             _context = context; 
         }
+
+        public Task<Employee> GetEmployeeByIdAsync(long id)
+        {
+            return _context.Employee.SingleAsync(a => a.Id == id);
+        }
+
         public Task<List<Employee>> GetEmployeesAsync()
         {
             return _context.Employee.ToListAsync();
