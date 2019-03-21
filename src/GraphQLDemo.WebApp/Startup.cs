@@ -39,9 +39,11 @@ namespace GraphQLDemo.WebApp
         {
             services.AddDbContext<GraphQLDemoContext>(options =>options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IEmployeeRepository, EmployeeRepositoryEf7>();
+            services.AddScoped<ICertificationRepository, CertificationRepositoryEf7>();
 
             services.AddScoped<EmployeeQuery>();
             services.AddScoped<EmployeeType>();
+            services.AddScoped<EmployeeCertificationType>();
             services.AddScoped<ISchema, EmployeeSchema>();
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();

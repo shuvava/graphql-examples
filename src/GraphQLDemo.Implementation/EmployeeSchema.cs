@@ -6,9 +6,9 @@ namespace GraphQLDemo.Implementation
 {
     public class EmployeeSchema : Schema  
     {  
-        public EmployeeSchema(IDependencyResolver resolver) : base(resolver)  
+        public EmployeeSchema(IDependencyResolver resolver) : base(resolver)
         {  
-            Query = resolver.Resolve<EmployeeQuery>();  
+            Query = resolver.Resolve<EmployeeQuery>();
         }  
     }
 }
