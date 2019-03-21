@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Net.Sockets;
 
@@ -15,5 +16,6 @@ namespace GraphQLDemo.Models
         public string Address { get; set; }
         public string ShortDescription { get; set; }
         public string LongDescription { get; set; }
+        public List<Certification> Certifications { get; set; }
     }
 }

@@ -18,6 +18,7 @@ namespace GraphQLDemo.WebApp.Controllers
     public class EmployeeController: ControllerBase
     {
         private const string BaseUrl = "http://localhost:5000/graphql";
+
         [HttpGet]
         public async Task<List<Employee>> Get()
         {
@@ -35,6 +36,26 @@ namespace GraphQLDemo.WebApp.Controllers
             }
         }
 
+        [HttpGet("withCerts")]
+        public async Task<List<Employee>> GetWithCert()
+        {
+            using (var client = new GraphQLClient(BaseUrl))  
+            {  
+                var query = new GraphQLRequest
+                {  
+                    Query = @"
+                        { employees
+                            {
+                                name email
+                                certifications
+                                    { title }
+                            }
+                        }",
+                };  
+                var response = await client.PostAsync(query);
+                return response.GetDataFieldAs<List<Employee>>("employees");
+            }
+        }
 
         [HttpGet("{id}")]
         public async Task<Employee> Get(int id)
