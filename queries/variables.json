@@ -1,0 +1,14 @@
+//post request body
+{  
+"query":"query all  
+                {  
+                  employees {name certifications {title}}  
+                }  
+                  
+         query E1($EmployeeId:ID!)  
+                {  
+                  employee(id:$EmployeeId){name, certifications {title}}  
+                }",  
+"OperationName":"E1",  
+"variables":{"EmployeeId":2}  
+} 
